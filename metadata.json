@@ -1,0 +1,6 @@
+{
+  "name": "LBEF HOOP FEST 2026",
+  "description": "Official collegiate tournament portal for LBEF HOOP FEST 2026 by Lord Buddha Education Foundation, Kathmandu, affiliated with APU Malaysia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

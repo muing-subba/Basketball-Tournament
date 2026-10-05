@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160" width="100%" height="100%">
+  <!-- White Background -->
+  <rect width="280" height="160" fill="#FFFFFF"/>
+
+  <!-- L B E F Blue Blocks -->
+  <!-- Block L -->
+  <rect x="15" y="15" width="37" height="48" fill="#005BAB"/>
+  <text x="33.5" y="52" font-family="'Arial', 'Helvetica', sans-serif" font-weight="900" font-size="42" fill="#FFFFFF" text-anchor="middle">L</text>
+
+  <!-- Block B -->
+  <rect x="56" y="15" width="37" height="48" fill="#005BAB"/>
+  <text x="74.5" y="52" font-family="'Arial', 'Helvetica', sans-serif" font-weight="900" font-size="42" fill="#FFFFFF" text-anchor="middle">B</text>
+
+  <!-- Block E -->
+  <rect x="97" y="15" width="37" height="48" fill="#005BAB"/>
+  <text x="115.5" y="52" font-family="'Arial', 'Helvetica', sans-serif" font-weight="900" font-size="42" fill="#FFFFFF" text-anchor="middle">E</text>
+
+  <!-- Block F -->
+  <rect x="138" y="15" width="37" height="48" fill="#005BAB"/>
+  <text x="156.5" y="52" font-family="'Arial', 'Helvetica', sans-serif" font-weight="900" font-size="42" fill="#FFFFFF" text-anchor="middle">F</text>
+
+  <!-- Red COLLEGE Banner directly below L B E F -->
+  <rect x="15" y="67" width="160" height="24" fill="#E31B23"/>
+  <text x="95" y="84" font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle" letter-spacing="4.5">COLLEGE</text>
+
+  <!-- Red SINCE 1998 Box with double border -->
+  <!-- Outer red frame -->
+  <rect x="183" y="15" width="82" height="76" fill="#E31B23"/>
+  <!-- Inner white double line border -->
+  <rect x="187" y="19" width="74" height="68" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+  <text x="224" y="47" font-family="'Arial', 'Helvetica', sans-serif" font-weight="800" font-size="19" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">SINCE</text>
+  <text x="224" y="73" font-family="'Arial', 'Helvetica', sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">1998</text>
+
+  <!-- Thin Blue Horizontal Rule -->
+  <line x1="15" y1="99" x2="265" y2="99" stroke="#005BAB" stroke-width="2.2"/>
+
+  <!-- Subtitle: THE FIRST IT COLLEGE OF NEPAL -->
+  <text x="140" y="118" font-family="'Arial', 'Helvetica', sans-serif" font-weight="700" font-size="12.5" fill="#111111" text-anchor="middle" letter-spacing="1.2">THE FIRST IT COLLEGE OF NEPAL</text>
+</svg>

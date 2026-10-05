@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competitions, Rules &amp; Tournament Bracket | LBEF HOOP FEST 2026</title>
+  <meta name="description" content="Explore competition divisions, official FIBA basketball rules, prize breakdown (NPR 150,000), and interactive championship knockout bracket.">
+  <link rel="icon" type="image/png" href="assets/images/lbef-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Tournament Bracket Tree Custom Styling */
+    .bracket-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+    .bracket-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .bracket-round-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--court-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .bracket-match-node {
+      background: var(--varsity-navy);
+      border: 1px solid var(--court-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .bracket-match-node:hover {
+      border-color: var(--court-orange);
+      transform: translateY(-2px);
+    }
+    .bracket-team-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .bracket-team-row:last-child {
+      border-bottom: none;
+    }
+    .bracket-team-row.winner {
+      background: rgba(255, 87, 34, 0.12);
+      font-weight: 700;
+      color: var(--pure-white);
+    }
+    .bracket-team-row.loser {
+      color: var(--text-muted);
+    }
+    .bracket-score {
+      font-family: var(--font-display);
+      font-weight: 800;
+      padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-links">
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">location_on</span> Maitidevi, Kathmandu, Nepal</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">call</span> +977-9801234567</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">mail</span> basketball@study.lbef.edu.np</span>
+      </div>
+      <div>
+        <span class="event-badge">
+          <span class="pulse-dot"></span>
+          Tournament Dates: Oct 25 – 30, 2026
+        </span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="logo-lockup" title="LBEF Hoop Fest 2026 Home">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+        </div>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <span class="logo-title">LBEF HOOP FEST</span>
+            <span class="year-tag">2026</span>
+          </div>
+          <span class="logo-sub">Lord Buddha Education Foundation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a href="competitions.html" class="active">Competitions</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a href="highlights.html">Highlights</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="schedule.html" class="btn-live-scores">
+          <span class="pulse-dot"></span>
+          Live Scores
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Team</span>
+        </a>
+        <div class="auth-nav-slot">
+          <a href="login.html" class="btn btn-secondary btn-sm">
+            <span class="material-symbols-outlined" style="font-size: 16px;">person</span>
+            <span>Login</span>
+          </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Tournament</a></li>
+        <li><a href="schedule.html">Match Schedule</a></li>
+        <li><a href="registration.html">Team &amp; Volunteer Registration</a></li>
+        <li><a href="competitions.html" class="active">Rules &amp; Tournament Bracket</a></li>
+        <li><a href="resources.html">Resources &amp; Downloads</a></li>
+        <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+        <li><a href="news.html">News &amp; Bulletins</a></li>
+        <li><a href="highlights.html">Highlights &amp; Hall of Fame</a></li>
+        <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+        <li><a href="contact.html">Venue &amp; Contact Secretariat</a></li>
+        <li><a href="feedback.html">Tournament Survey &amp; Feedback</a></li>
+        <li><a href="dashboard.html">Participant Dashboard</a></li>
+        <li><a href="login.html">Demo Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO HEADER -->
+    <section style="background: linear-gradient(135deg, var(--stadium-navy) 0%, var(--varsity-navy) 100%); padding: 50px 24px; border-bottom: 1px solid var(--court-border); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="section-kicker" style="justify-content: center; margin-bottom: 8px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">sports_score</span>
+          FIBA Standards &bull; Bracket Stage
+        </span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 4.5vw, 46px); color: var(--pure-white); font-weight: 800; text-transform: uppercase;">
+          Competitions &amp; Tournament Bracket
+        </h1>
+        <p style="font-size: 14px; color: var(--secondary); max-width: 600px; margin: 8px auto 0 auto;">
+          Full regulations, division categories, prize pool structure, and interactive elimination bracket for Hoop Fest 2026.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4 COMPETITION CATEGORIES -->
+    <section class="section-wrapper">
+      <div class="section-header">
+        <span class="section-kicker">Championship Divisions</span>
+        <h2 class="section-title">Tournament Categories</h2>
+        <p class="section-desc">Students compete across four exciting formats during the 6-day championship.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined" style="font-size: 28px;">sports_basketball</span>
+          </div>
+          <span class="badge-tag" style="background: rgba(255,87,34,0.15); color: var(--court-orange); margin-bottom: 6px;">Main Event</span>
+          <h3 class="card-title">5v5 Men's Varsity</h3>
+          <p class="card-text">Full-court 5-on-5 inter-faculty championship following complete FIBA 4x10min quarters. 16 teams battle for the Grand Trophy.</p>
+          <div class="card-footer">
+            <span>Roster: 5-10 Athletes</span>
+            <span style="color: #81c784;">1st: NPR 80,000</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined" style="font-size: 28px;">female</span>
+          </div>
+          <span class="badge-tag" style="background: rgba(184,199,230,0.15); color: var(--secondary); margin-bottom: 6px;">Invitational</span>
+          <h3 class="card-title">5v5 Women's Collegiate</h3>
+          <p class="card-text">Fast-paced full-court tournament showcasing elite female collegiate basketball talent from across Kathmandu valley.</p>
+          <div class="card-footer">
+            <span>Roster: 5-10 Athletes</span>
+            <span style="color: #81c784;">1st: NPR 35,000</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined" style="font-size: 28px;">electric_bolt</span>
+          </div>
+          <span class="badge-tag" style="background: rgba(255,87,34,0.15); color: var(--court-orange); margin-bottom: 6px;">Half-Court Slam</span>
+          <h3 class="card-title">3v3 Express Shootout</h3>
+          <p class="card-text">Half-court, 12-second shot clock format. First team to 21 points or leading team after 10 continuous minutes wins.</p>
+          <div class="card-footer">
+            <span>Roster: 3-4 Athletes</span>
+            <span style="color: #81c784;">1st: NPR 20,000</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <span class="material-symbols-outlined" style="font-size: 28px;">target</span>
+          </div>
+          <span class="badge-tag" style="background: rgba(184,199,230,0.15); color: var(--secondary); margin-bottom: 6px;">Individual Contest</span>
+          <h3 class="card-title">3-Point Perimeter King</h3>
+          <p class="card-text">Individual shooter showdown: 5 racks of 5 balls around the arc in 60 seconds, including the 2-point money ball.</p>
+          <div class="card-footer">
+            <span>1 Shooter / Faculty</span>
+            <span style="color: #81c784;">Trophy + NPR 15,000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TOURNAMENT BRACKET TREE -->
+    <section class="section-wrapper" style="background: var(--surface-low); border-top: 1px solid var(--court-border); border-bottom: 1px solid var(--court-border);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <span class="section-kicker">
+            <span class="material-symbols-outlined" style="font-size: 16px;">account_tree</span>
+            Live Road to the Championship
+          </span>
+          <h2 class="section-title">Championship Elimination Bracket</h2>
+        </div>
+        <span style="font-size: 12px; color: var(--secondary);">Click any match node for team statistics and scores</span>
+      </div>
+
+      <div class="bracket-container">
+        <!-- Quarterfinals Column -->
+        <div class="bracket-column">
+          <div class="bracket-round-title">Quarterfinals (October 27)</div>
+
+          <!-- QF 1 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M07')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">QF 1 &bull; Court 1</div>
+            <div class="bracket-team-row winner">
+              <span>#1 Cyber Warriors</span>
+              <span class="bracket-score">78</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>#5 Maitidevi Mavericks</span>
+              <span class="bracket-score">71</span>
+            </div>
+          </div>
+
+          <!-- QF 2 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M08')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">QF 2 &bull; Court 1</div>
+            <div class="bracket-team-row winner">
+              <span>#2 KTM Dunkers</span>
+              <span class="bracket-score">82</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>#4 APU Thunderbolts</span>
+              <span class="bracket-score">79</span>
+            </div>
+          </div>
+
+          <!-- QF 3 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M09')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">QF 3 &bull; Court 2</div>
+            <div class="bracket-team-row winner">
+              <span>#3 Tech Titans</span>
+              <span class="bracket-score">66</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>#6 Cloud Hawks</span>
+              <span class="bracket-score">60</span>
+            </div>
+          </div>
+
+          <!-- QF 4 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M02')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">QF 4 &bull; Court 2</div>
+            <div class="bracket-team-row winner">
+              <span>#7 Apex Legends</span>
+              <span class="bracket-score">74</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>#8 KTM Vipers</span>
+              <span class="bracket-score">68</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Semifinals Column -->
+        <div class="bracket-column">
+          <div class="bracket-round-title">Semifinals (October 28)</div>
+
+          <!-- SF 1 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M10')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">SF 1 &bull; 01:00 PM NPT</div>
+            <div class="bracket-team-row winner">
+              <span>Cyber Warriors</span>
+              <span class="bracket-score">85</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>KTM Dunkers</span>
+              <span class="bracket-score">81</span>
+            </div>
+          </div>
+
+          <!-- SF 2 -->
+          <div class="bracket-match-node" onclick="viewMatchDetails('M11')">
+            <div style="padding: 6px 12px; background: rgba(0,0,0,0.2); font-size: 10px; color: var(--text-muted); text-transform: uppercase;">SF 2 &bull; 04:00 PM NPT</div>
+            <div class="bracket-team-row winner">
+              <span>Tech Titans</span>
+              <span class="bracket-score">72</span>
+            </div>
+            <div class="bracket-team-row loser">
+              <span>Apex Legends</span>
+              <span class="bracket-score">69</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Championship Column -->
+        <div class="bracket-column" style="justify-content: center;">
+          <div class="bracket-round-title" style="color: #ffd700;">Grand Final (October 30)</div>
+
+          <!-- Final -->
+          <div class="bracket-match-node" style="border: 2px solid var(--court-orange); box-shadow: 0 0 20px rgba(255,87,34,0.3);" onclick="viewMatchDetails('M13')">
+            <div style="padding: 8px 12px; background: var(--court-orange); color: var(--pure-white); font-weight: 800; font-size: 11px; text-transform: uppercase; display: flex; justify-content: space-between;">
+              <span>Championship Clash</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">trophy</span>
+            </div>
+            <div class="bracket-team-row" style="background: rgba(255, 87, 34, 0.15); color: var(--pure-white); font-weight: 700;">
+              <span>Cyber Warriors</span>
+              <span class="bracket-score" style="color: var(--court-orange);">TBD</span>
+            </div>
+            <div class="bracket-team-row" style="color: var(--pure-white); font-weight: 700;">
+              <span>Tech Titans</span>
+              <span class="bracket-score" style="color: var(--court-orange);">TBD</span>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 14px;">
+            <span class="badge-tag" style="background: rgba(255, 215, 0, 0.2); color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.4);">
+              CHAMPION LIFTS NPR 80,000 + CUP
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES & REGULATIONS ACCORDION -->
+    <section class="section-wrapper">
+      <div class="section-header">
+        <span class="section-kicker">Official Rulebook</span>
+        <h2 class="section-title">FIBA Guidelines &amp; Campus Code</h2>
+        <p class="section-desc">Key competition statutes enforced across all LBEF Hoop Fest games.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; max-width: 900px; margin: 0 auto;">
+        <!-- Rule 1 -->
+        <div class="card" style="padding: 20px;">
+          <h3 style="font-family: var(--font-display); font-size: 17px; color: var(--pure-white); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange);">timer</span>
+            Match Duration &amp; Shot Clock
+          </h3>
+          <p style="font-size: 13px; color: var(--secondary); line-height: 1.6;">
+            All 5v5 matches consist of four (4) quarters of 10 minutes stop-clock play. Halftime interval is 10 minutes, with 2-minute breaks between quarters. 24-second shot clock applies, resetting to 14 seconds upon an offensive rebound.
+          </p>
+        </div>
+
+        <!-- Rule 2 -->
+        <div class="card" style="padding: 20px;">
+          <h3 style="font-family: var(--font-display); font-size: 17px; color: var(--pure-white); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange);">restart_alt</span>
+            Overtime Protocol
+          </h3>
+          <p style="font-size: 13px; color: var(--secondary); line-height: 1.6;">
+            If scores are tied at the expiration of 4th quarter regulation time, an extra period of five (5) minutes will be played. Consecutive 5-minute overtimes continue until a clear winner emerges.
+          </p>
+        </div>
+
+        <!-- Rule 3 -->
+        <div class="card" style="padding: 20px;">
+          <h3 style="font-family: var(--font-display); font-size: 17px; color: var(--pure-white); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange);">sports</span>
+            Fouls, Free Throws &amp; Disqualification
+          </h3>
+          <p style="font-size: 13px; color: var(--secondary); line-height: 1.6;">
+            A player who commits five (5) personal or technical fouls is disqualified from the remainder of the game. Team foul bonus triggers two free throws on the fifth team foul in each quarter.
+          </p>
+        </div>
+
+        <!-- Rule 4 -->
+        <div class="card" style="padding: 20px;">
+          <h3 style="font-family: var(--font-display); font-size: 17px; color: var(--pure-white); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange);">gavel</span>
+            Disciplinary &amp; Zero Tolerance Policy
+          </h3>
+          <p style="font-size: 13px; color: var(--secondary); line-height: 1.6;">
+            Unsportsmanlike conduct, verbal abuse of referees or volunteers, or violent physical altercations will result in immediate player expulsion and potential team disqualification certified by the Athletic Advisory Board.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIZE POOL BREAKDOWN -->
+    <section class="section-wrapper" style="background: var(--varsity-navy); border-top: 1px solid var(--court-border); text-align: center;">
+      <span class="section-kicker" style="justify-content: center;">Honor &amp; Rewards</span>
+      <h2 class="section-title">Championship Prize Pool: NPR 150,000</h2>
+      <p class="section-desc" style="margin: 8px auto 32px auto;">Certified trophies, medals, cash bursaries, and APU athletic excellence certificates.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 960px; margin: 0 auto;">
+        <div style="background: var(--surface-low); padding: 20px; border-radius: var(--radius-sm); border: 1px solid #ffd700;">
+          <div style="color: #ffd700; font-size: 28px; margin-bottom: 6px;">🥇</div>
+          <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--pure-white);">Champions (5v5)</div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #81c784; margin-top: 4px;">NPR 80,000</div>
+          <div style="font-size: 11px; color: var(--secondary);">Trophy, Medals &amp; APU Cup</div>
+        </div>
+
+        <div style="background: var(--surface-low); padding: 20px; border-radius: var(--radius-sm); border: 1px solid #c0c0c0;">
+          <div style="color: #c0c0c0; font-size: 28px; margin-bottom: 6px;">🥈</div>
+          <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--pure-white);">Runner-Up</div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #81c784; margin-top: 4px;">NPR 40,000</div>
+          <div style="font-size: 11px; color: var(--secondary);">Shield &amp; Silver Medals</div>
+        </div>
+
+        <div style="background: var(--surface-low); padding: 20px; border-radius: var(--radius-sm); border: 1px solid #cd7f32;">
+          <div style="color: #cd7f32; font-size: 28px; margin-bottom: 6px;">🥉</div>
+          <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--pure-white);">Third Place</div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #81c784; margin-top: 4px;">NPR 15,000</div>
+          <div style="font-size: 11px; color: var(--secondary);">Bronze Medals</div>
+        </div>
+
+        <div style="background: var(--surface-low); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--court-border);">
+          <div style="color: var(--court-orange); font-size: 28px; margin-bottom: 6px;">⭐</div>
+          <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--pure-white);">Tournament MVP</div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #81c784; margin-top: 4px;">NPR 10,000</div>
+          <div style="font-size: 11px; color: var(--secondary);">Golden Ball Plaque</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MATCH DETAILS MODAL -->
+  <div id="modal-match-details" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-match-details')" aria-label="Close modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div id="match-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div class="footer-logo-wrapper">
+            <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" class="footer-logo-img" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 15px;">LBEF HOOP FEST</h4>
+            <span style="font-size: 11px; color: var(--court-orange); font-weight: 700; text-transform: uppercase;">Varsity Championship 2026</span>
+          </div>
+        </div>
+        <p>The premier collegiate inter-university basketball championship in Kathmandu, hosting elite student talent, sportsmanship, and college pride.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Hub</h4>
+        <ul class="footer-links">
+          <li><a href="schedule.html">Match Fixtures &amp; Scores</a></li>
+          <li><a href="competitions.html">Divisions &amp; Brackets</a></li>
+          <li><a href="registration.html">Team &amp; Volunteer Signup</a></li>
+          <li><a href="news.html">Press Releases &amp; Bulletins</a></li>
+          <li><a href="faq.html">Rules &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Official Regulations</h4>
+        <p style="margin-bottom: 14px;">All student athletes and visiting teams are subject to FIBA international standards and LBEF campus code.</p>
+        <ul class="footer-links">
+          <li><a href="resources.html">Official Rulebook &amp; Code</a></li>
+          <li><a href="resources.html">Player Eligibility Checklist</a></li>
+          <li><a href="resources.html">Emergency &amp; Medical Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Secretariat</h4>
+        <ul class="footer-links">
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">location_on</span>
+            <span>Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">call</span>
+            <span>+977-9801234567</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">mail</span>
+            <span>basketball@study.lbef.edu.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lord Buddha Education Foundation. Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">About Tournament</a>
+        <a href="competitions.html">Tournament Terms</a>
+        <a href="contact.html">Venue Guide</a>
+        <a href="feedback.html">Submit Survey</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/schedule.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament Survey &amp; Feedback | LBEF HOOP FEST 2026</title>
+  <meta name="description" content="Submit your post-match feedback and ratings for LBEF HOOP FEST 2026. Real-time aggregated survey ratings and satisfaction scores.">
+  <link rel="icon" type="image/png" href="assets/images/lbef-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .star-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .star-btn {
+      background: none;
+      border: none;
+      color: #556987;
+      cursor: pointer;
+      font-size: 28px;
+      padding: 2px;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+    .star-btn:hover, .star-btn.active {
+      color: #ffd700;
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-links">
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">location_on</span> Maitidevi, Kathmandu, Nepal</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">call</span> +977-9801234567</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">mail</span> basketball@study.lbef.edu.np</span>
+      </div>
+      <div>
+        <span class="event-badge">
+          <span class="pulse-dot"></span>
+          Tournament Dates: Oct 25 – 30, 2026
+        </span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="logo-lockup" title="LBEF Hoop Fest 2026 Home">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+        </div>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <span class="logo-title">LBEF HOOP FEST</span>
+            <span class="year-tag">2026</span>
+          </div>
+          <span class="logo-sub">Lord Buddha Education Foundation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a href="competitions.html">Competitions</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a href="highlights.html">Highlights</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="schedule.html" class="btn-live-scores">
+          <span class="pulse-dot"></span>
+          Live Scores
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Team</span>
+        </a>
+        <div class="auth-nav-slot">
+          <a href="login.html" class="btn btn-secondary btn-sm">
+            <span class="material-symbols-outlined" style="font-size: 16px;">person</span>
+            <span>Login</span>
+          </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Tournament</a></li>
+        <li><a href="schedule.html">Match Schedule</a></li>
+        <li><a href="registration.html">Team &amp; Volunteer Registration</a></li>
+        <li><a href="competitions.html">Rules &amp; Tournament Bracket</a></li>
+        <li><a href="resources.html">Resources &amp; Downloads</a></li>
+        <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+        <li><a href="news.html">News &amp; Bulletins</a></li>
+        <li><a href="highlights.html">Highlights &amp; Hall of Fame</a></li>
+        <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+        <li><a href="contact.html">Venue &amp; Contact Secretariat</a></li>
+        <li><a href="feedback.html" class="active">Tournament Survey &amp; Feedback</a></li>
+        <li><a href="dashboard.html">Participant Dashboard</a></li>
+        <li><a href="login.html">Demo Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO HEADER -->
+    <section style="background: linear-gradient(135deg, var(--stadium-navy) 0%, var(--varsity-navy) 100%); padding: 50px 24px; border-bottom: 1px solid var(--court-border); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="section-kicker" style="justify-content: center; margin-bottom: 8px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">reviews</span>
+          Quality &amp; Experience Survey
+        </span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 4.5vw, 46px); color: var(--pure-white); font-weight: 800; text-transform: uppercase;">
+          Tournament Feedback &amp; Survey
+        </h1>
+        <p style="font-size: 14px; color: var(--secondary); max-width: 600px; margin: 8px auto 0 auto;">
+          Help the athletic council improve future editions of LBEF Hoop Fest. Submit ratings and explore live aggregated feedback statistics.
+        </p>
+      </div>
+    </section>
+
+    <!-- SURVEY FORM & LIVE AVERAGE RATINGS -->
+    <section class="section-wrapper">
+      <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px;" class="dashboard-grid">
+        <!-- Feedback Form -->
+        <div style="background: var(--varsity-navy); border: 1px solid var(--court-border); border-radius: var(--radius-md); padding: 32px;">
+          <h2 style="font-family: var(--font-display); font-size: 22px; color: var(--pure-white); text-transform: uppercase; margin-bottom: 8px;">
+            Participant &amp; Spectator Survey
+          </h2>
+          <p style="font-size: 13px; color: var(--secondary); margin-bottom: 24px;">
+            All ratings are saved in localStorage and dynamically recalculate the public satisfaction score.
+          </p>
+
+          <form id="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label required" for="fb-name">Your Name</label>
+                <input type="text" id="fb-name" class="form-input" placeholder="e.g. Anupama Shrestha" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label required" for="fb-role">Your Role at Tournament</label>
+                <select id="fb-role" class="form-select" required>
+                  <option value="Player">Varsity Player / Athlete</option>
+                  <option value="Spectator">Campus Spectator</option>
+                  <option value="Volunteer">Courtside Volunteer</option>
+                  <option value="Coach">Team Coach / Manager</option>
+                  <option value="Faculty">LBEF / APU Faculty Staff</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Star Ratings Block -->
+            <div style="background: var(--surface-low); border: 1px solid var(--court-border); padding: 20px; border-radius: var(--radius-sm); margin-bottom: 20px; display: flex; flex-direction: column; gap: 16px;">
+              <div>
+                <label class="form-label">1. Overall Tournament Experience</label>
+                <div class="star-rating-row" data-field="overall">
+                  <button type="button" class="star-btn" onclick="setRating('overall', 1)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('overall', 2)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('overall', 3)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('overall', 4)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('overall', 5)">★</button>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label">2. Tournament Organization &amp; Officiating</label>
+                <div class="star-rating-row" data-field="org">
+                  <button type="button" class="star-btn" onclick="setRating('org', 1)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('org', 2)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('org', 3)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('org', 4)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('org', 5)">★</button>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label">3. Schedule Punctuality &amp; Timing</label>
+                <div class="star-rating-row" data-field="sched">
+                  <button type="button" class="star-btn" onclick="setRating('sched', 1)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('sched', 2)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('sched', 3)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('sched', 4)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('sched', 5)">★</button>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label">4. Arena &amp; Court Hardwood Facilities</label>
+                <div class="star-rating-row" data-field="fac">
+                  <button type="button" class="star-btn" onclick="setRating('fac', 1)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('fac', 2)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('fac', 3)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('fac', 4)">★</button>
+                  <button type="button" class="star-btn" onclick="setRating('fac', 5)">★</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recommendation Question (1-10) -->
+            <div class="form-group">
+              <label class="form-label required" for="fb-nps">How likely are you to recommend Hoop Fest to peers? (1 = Unlikely, 10 = Definitely)</label>
+              <select id="fb-nps" class="form-select" required>
+                <option value="10">10 &bull; Absolutely enthusiastic</option>
+                <option value="9">9 &bull; Very likely</option>
+                <option value="8" selected>8 &bull; Likely</option>
+                <option value="7">7 &bull; Moderate</option>
+                <option value="6">6 &bull; Neutral</option>
+                <option value="5">5 &bull; Could be improved</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label required" for="fb-comments">Written Suggestions &amp; Constructive Remarks</label>
+              <textarea id="fb-comments" class="form-textarea" rows="4" placeholder="What was your favorite moment or what should the athletic council improve next year?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Submit Tournament Feedback</span>
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Survey Aggregation Summary -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <!-- Scorecard -->
+          <div class="card" style="padding: 28px; text-align: center;">
+            <span class="section-kicker" style="justify-content: center; margin-bottom: 8px;">Dynamic Aggregation</span>
+            <h3 style="font-family: var(--font-display); font-size: 20px; color: var(--pure-white);">Average Participant Rating</h3>
+            
+            <div style="margin: 20px 0;">
+              <span id="avg-score-display" style="font-family: var(--font-display); font-size: 64px; font-weight: 900; color: #ffd700; line-height: 1;">4.8</span>
+              <span style="font-size: 20px; color: var(--text-muted); font-weight: 700;"> / 5.0</span>
+              <div id="avg-stars-row" style="color: #ffd700; font-size: 24px; margin-top: 6px;">★★★★★</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; text-align: left; background: var(--surface-low); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--court-border);">
+              <div>
+                <span style="color: var(--text-muted); display: block;">Total Submissions:</span>
+                <strong id="total-reviews-count" style="color: var(--pure-white); font-size: 18px;">28</strong>
+              </div>
+              <div>
+                <span style="color: var(--text-muted); display: block;">Recommendation Rate:</span>
+                <strong id="recommend-percent" style="color: #81c784; font-size: 18px;">96%</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Reviews Stream -->
+          <div class="card" style="padding: 24px;">
+            <h4 style="font-family: var(--font-display); font-size: 18px; color: var(--pure-white); margin-bottom: 16px;">Recent Participant Thoughts</h4>
+            <div id="recent-reviews-list" style="display: flex; flex-direction: column; gap: 14px; max-height: 320px; overflow-y: auto;">
+              <!-- Injected dynamically via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div id="modal-feedback-confirm" class="modal-overlay">
+    <div class="modal-box" style="max-width: 500px; text-align: center;">
+      <button class="modal-close" onclick="closeModal('modal-feedback-confirm')" aria-label="Close modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div style="width: 56px; height: 56px; background: rgba(76,175,80,0.2); color: #81c784; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+        <span class="material-symbols-outlined" style="font-size: 32px;">thumb_up</span>
+      </div>
+      <h3 style="font-family: var(--font-display); font-size: 22px; color: var(--pure-white); margin-bottom: 8px;">Feedback Successfully Logged!</h3>
+      <p style="font-size: 13px; color: var(--secondary); margin-bottom: 20px;">
+        Thank you for helping us elevate the varsity sports standard at Lord Buddha Education Foundation.
+      </p>
+      <button class="btn btn-primary" onclick="closeModal('modal-feedback-confirm')">Acknowledge</button>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div class="footer-logo-wrapper">
+            <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" class="footer-logo-img" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 15px;">LBEF HOOP FEST</h4>
+            <span style="font-size: 11px; color: var(--court-orange); font-weight: 700; text-transform: uppercase;">Varsity Championship 2026</span>
+          </div>
+        </div>
+        <p>The premier collegiate inter-university basketball championship in Kathmandu, hosting elite student talent, sportsmanship, and college pride.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Hub</h4>
+        <ul class="footer-links">
+          <li><a href="schedule.html">Match Fixtures &amp; Scores</a></li>
+          <li><a href="competitions.html">Divisions &amp; Brackets</a></li>
+          <li><a href="registration.html">Team &amp; Volunteer Signup</a></li>
+          <li><a href="news.html">Press Releases &amp; Bulletins</a></li>
+          <li><a href="faq.html">Rules &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Official Regulations</h4>
+        <p style="margin-bottom: 14px;">All student athletes and visiting teams are subject to FIBA international standards and LBEF campus code.</p>
+        <ul class="footer-links">
+          <li><a href="resources.html">Official Rulebook &amp; Code</a></li>
+          <li><a href="resources.html">Player Eligibility Checklist</a></li>
+          <li><a href="resources.html">Emergency &amp; Medical Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Secretariat</h4>
+        <ul class="footer-links">
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">location_on</span>
+            <span>Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">call</span>
+            <span>+977-9801234567</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">mail</span>
+            <span>basketball@study.lbef.edu.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lord Buddha Education Foundation. Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">About Tournament</a>
+        <a href="competitions.html">Tournament Terms</a>
+        <a href="contact.html">Venue Guide</a>
+        <a href="feedback.html">Submit Survey</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    const ratings = { overall: 5, org: 5, sched: 4, fac: 5 };
+
+    const DEFAULT_FEEDBACK = [
+      { name: "Suman Shakya", role: "Varsity Player", score: 5, comment: "Incredible hardwood quality at Maitidevi Arena! Referees from FIBA Nepal kept the game flow sharp.", date: "October 26, 2026" },
+      { name: "Divya Adhikari", role: "Campus Spectator", score: 5, comment: "The electric atmosphere during Cyber Warriors vs Tech Titans was unforgettable. Great sound setup!", date: "October 26, 2026" },
+      { name: "Kiran Shrestha", role: "Courtside Volunteer", score: 4, comment: "Volunteering at the scoring table was well coordinated. Great learning experience.", date: "October 25, 2026" }
+    ];
+
+    function setRating(field, val) {
+      ratings[field] = val;
+      const row = document.querySelector(`.star-rating-row[data-field="${field}"]`);
+      if (row) {
+        const btns = row.querySelectorAll('.star-btn');
+        btns.forEach((b, idx) => {
+          if (idx < val) b.classList.add('active');
+          else b.classList.remove('active');
+        });
+      }
+    }
+
+    function renderFeedbackSummary() {
+      const stored = JSON.parse(localStorage.getItem('lbef_feedback') || '[]');
+      const all = [...DEFAULT_FEEDBACK, ...stored];
+
+      const total = all.length;
+      let sum = 0;
+      all.forEach(item => sum += (item.score || 5));
+      const avg = (sum / total).toFixed(1);
+
+      document.getElementById('avg-score-display').textContent = avg;
+      document.getElementById('total-reviews-count').textContent = total;
+
+      const listContainer = document.getElementById('recent-reviews-list');
+      if (listContainer) {
+        listContainer.innerHTML = all.slice(-4).reverse().map(item => `
+          <div style="background: var(--surface-low); border: 1px solid var(--court-border); padding: 12px 14px; border-radius: var(--radius-sm);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <strong style="color: var(--pure-white); font-size: 13px;">${item.name}</strong>
+              <span style="color: #ffd700; font-size: 13px;">${'★'.repeat(item.score || 5)}</span>
+            </div>
+            <span style="font-size: 11px; color: var(--court-orange); font-weight: 600; text-transform: uppercase;">${item.role}</span>
+            <p style="font-size: 12px; color: var(--secondary); margin-top: 6px; line-height: 1.5;">"${item.comment}"</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    function handleFeedbackSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fb-name').value.trim();
+      const role = document.getElementById('fb-role').value;
+      const nps = document.getElementById('fb-nps').value;
+      const comment = document.getElementById('fb-comments').value.trim();
+
+      const calculatedScore = Math.round((ratings.overall + ratings.org + ratings.sched + ratings.fac) / 4);
+
+      const stored = JSON.parse(localStorage.getItem('lbef_feedback') || '[]');
+      stored.push({
+        name,
+        role,
+        nps,
+        score: calculatedScore,
+        comment,
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+      });
+      localStorage.setItem('lbef_feedback', JSON.stringify(stored));
+
+      e.target.reset();
+      // Reset stars
+      ['overall', 'org', 'sched', 'fac'].forEach(f => setRating(f, 5));
+
+      renderFeedbackSummary();
+      openModal('modal-feedback-confirm');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['overall', 'org', 'sched', 'fac'].forEach(f => setRating(f, 5));
+      renderFeedbackSummary();
+    });
+
+    window.setRating = setRating;
+    window.handleFeedbackSubmit = handleFeedbackSubmit;
+  </script>
+</body>
+</html>

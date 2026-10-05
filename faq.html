@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | LBEF HOOP FEST 2026</title>
+  <meta name="description" content="Find answers to player eligibility, team registration, rules, fees, spectator access, and venue directions for LBEF HOOP FEST 2026.">
+  <link rel="icon" type="image/png" href="assets/images/lbef-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-item {
+      background: var(--varsity-navy);
+      border: 1px solid var(--court-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+    .faq-item:hover {
+      border-color: rgba(255, 87, 34, 0.4);
+    }
+    .faq-header {
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    .faq-question-text {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--pure-white);
+    }
+    .faq-icon {
+      color: var(--court-orange);
+      transition: transform 0.25s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+    .faq-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      font-size: 14px;
+      color: var(--secondary);
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-content {
+      padding: 0 20px 18px 20px;
+      max-height: 300px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-links">
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">location_on</span> Maitidevi, Kathmandu, Nepal</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">call</span> +977-9801234567</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">mail</span> basketball@study.lbef.edu.np</span>
+      </div>
+      <div>
+        <span class="event-badge">
+          <span class="pulse-dot"></span>
+          Tournament Dates: Oct 25 – 30, 2026
+        </span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="logo-lockup" title="LBEF Hoop Fest 2026 Home">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+        </div>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <span class="logo-title">LBEF HOOP FEST</span>
+            <span class="year-tag">2026</span>
+          </div>
+          <span class="logo-sub">Lord Buddha Education Foundation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a href="competitions.html">Competitions</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="faq.html" class="active">FAQ</a></li>
+          <li class="nav-item"><a href="highlights.html">Highlights</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="schedule.html" class="btn-live-scores">
+          <span class="pulse-dot"></span>
+          Live Scores
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Team</span>
+        </a>
+        <div class="auth-nav-slot">
+          <a href="login.html" class="btn btn-secondary btn-sm">
+            <span class="material-symbols-outlined" style="font-size: 16px;">person</span>
+            <span>Login</span>
+          </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Tournament</a></li>
+        <li><a href="schedule.html">Match Schedule</a></li>
+        <li><a href="registration.html">Team &amp; Volunteer Registration</a></li>
+        <li><a href="competitions.html">Rules &amp; Tournament Bracket</a></li>
+        <li><a href="resources.html">Resources &amp; Downloads</a></li>
+        <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+        <li><a href="news.html">News &amp; Bulletins</a></li>
+        <li><a href="highlights.html">Highlights &amp; Hall of Fame</a></li>
+        <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+        <li><a href="faq.html" class="active">Frequently Asked Questions</a></li>
+        <li><a href="contact.html">Venue &amp; Contact Secretariat</a></li>
+        <li><a href="feedback.html">Tournament Survey &amp; Feedback</a></li>
+        <li><a href="dashboard.html">Participant Dashboard</a></li>
+        <li><a href="login.html">Demo Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO HEADER -->
+    <section style="background: linear-gradient(135deg, var(--stadium-navy) 0%, var(--varsity-navy) 100%); padding: 50px 24px; border-bottom: 1px solid var(--court-border); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="section-kicker" style="justify-content: center; margin-bottom: 8px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">help_center</span>
+          Participant &amp; Spectator Knowledge Base
+        </span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 4.5vw, 46px); color: var(--pure-white); font-weight: 800; text-transform: uppercase;">
+          Frequently Asked Questions
+        </h1>
+        <p style="font-size: 14px; color: var(--secondary); max-width: 600px; margin: 8px auto 0 auto;">
+          Find detailed guidance on student eligibility, team registration deadlines, admission rules, and arena facilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEARCH & CATEGORY SELECTOR -->
+    <section class="section-wrapper" style="padding-top: 32px; padding-bottom: 20px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; background: var(--varsity-navy); border: 1px solid var(--court-border); padding: 16px 20px; border-radius: var(--radius-md);">
+        <div style="position: relative; flex: 1; min-width: 240px;">
+          <input type="text" id="faq-search" class="form-input" style="width: 100%; padding-left: 36px;" placeholder="Search questions (e.g. eligibility, fees, parking)..." oninput="filterFaq()">
+          <span class="material-symbols-outlined" style="position: absolute; left: 10px; top: 11px; color: var(--text-muted); font-size: 18px;">search</span>
+        </div>
+
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <div class="tabs-container" style="margin-bottom: 0;">
+            <button class="tab-btn faq-tab active" onclick="setFaqCat('all', this)">All</button>
+            <button class="tab-btn faq-tab" onclick="setFaqCat('eligibility', this)">Eligibility</button>
+            <button class="tab-btn faq-tab" onclick="setFaqCat('registration', this)">Registration</button>
+            <button class="tab-btn faq-tab" onclick="setFaqCat('rules', this)">Rules</button>
+            <button class="tab-btn faq-tab" onclick="setFaqCat('venue', this)">Venue</button>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="toggleAllFaqs()">Toggle Expand All</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCORDION CONTAINER -->
+    <section class="section-wrapper" style="padding-top: 0; max-width: 960px;">
+      <div id="faq-list">
+        <!-- Q1 -->
+        <div class="faq-item" data-cat="eligibility" data-q="who is eligible to participate in lbef hoop fest 2026 student id">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Who is eligible to participate in LBEF Hoop Fest 2026?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            Any currently enrolled undergraduate or graduate student at Lord Buddha Education Foundation (LBEF) or invited partner institutions such as Asia Pacific University (APU), Malaysia is eligible. All players must present their valid physical college smart card prior to entering the court.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item" data-cat="registration" data-q="what is the team registration deadline fee npr">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">What is the registration deadline and fee structure?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            Team roster registrations close on <strong>October 18, 2026 at 11:59 PM NPT</strong>. The illustrative tournament fee is NPR 5,000 per squad for 5v5 varsity competition, which includes official tournament uniforms, medical coverage, and officiating charges.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item" data-cat="rules" data-q="what rules governing fouls match quarters overtime fiba standard">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Which official rules govern tournament play?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            All games strictly follow FIBA official basketball rules. Matches consist of four 10-minute stop-clock periods. In the event of a tie at the end of regulation, 5-minute overtime periods are played until a victor is determined. Five personal fouls result in player disqualification.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item" data-cat="venue" data-q="where is the venue located spectator entry fee admission tickets kathmandu maitidevi">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Where is the venue and do spectators require tickets?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            All matches are hosted at the <strong>LBEF Sports Complex Indoor Arena in Maitidevi, Kathmandu, Nepal</strong>. Admission is completely free for all bona fide college students, faculty, and accredited guests upon presentation of university identification.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item" data-cat="registration" data-q="can a player represent more than one team roster substitute">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">Can a student athlete play for more than one team?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            No. A player can only be registered on a single varsity roster. Registering across multiple teams will disqualify the athlete from the tournament immediately under LBEF sports council regulations.
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item" data-cat="eligibility" data-q="how can students sign up as courtside volunteers shift timings certificate">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">How can students get involved as event volunteers?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            Interested students can navigate to the <a href="registration.html" style="color: var(--court-orange); text-decoration: underline;">Registration Page</a> and select the "Volunteer Application" tab. Volunteers assist with table officiating, scoreboard tracking, first aid dispatch, and media recording.
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item" data-cat="venue" data-q="what parking and medical facilities are available at maitidevi arena">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span class="faq-question-text">What facilities and medical amenities are provided at the arena?</span>
+            <span class="material-symbols-outlined faq-icon">expand_more</span>
+          </div>
+          <div class="faq-content">
+            Maitidevi Arena features high-grip shock-absorbing hardwood, two full-sized regulation courts, player locker rooms with showers, dedicated first-aid stations with certified sports physiotherapists, and two-wheeler campus parking.
+          </div>
+        </div>
+      </div>
+
+      <div id="faq-empty-state" style="display: none; padding: 48px; text-align: center; background: var(--varsity-navy); border-radius: var(--radius-sm); border: 1px dashed var(--court-border);">
+        <span class="material-symbols-outlined" style="font-size: 40px; color: var(--text-muted); margin-bottom: 8px;">search_off</span>
+        <h4 style="font-family: var(--font-display); font-size: 18px; color: var(--pure-white);">No Matching Questions Found</h4>
+        <p style="font-size: 13px; color: var(--secondary); margin-top: 4px;">Try searching with different terms or contact the secretariat directly.</p>
+        <a href="contact.html" class="btn btn-secondary btn-sm" style="margin-top: 14px;">Contact Secretariat</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div class="footer-logo-wrapper">
+            <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" class="footer-logo-img" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 15px;">LBEF HOOP FEST</h4>
+            <span style="font-size: 11px; color: var(--court-orange); font-weight: 700; text-transform: uppercase;">Varsity Championship 2026</span>
+          </div>
+        </div>
+        <p>The premier collegiate inter-university basketball championship in Kathmandu, hosting elite student talent, sportsmanship, and college pride.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Hub</h4>
+        <ul class="footer-links">
+          <li><a href="schedule.html">Match Fixtures &amp; Scores</a></li>
+          <li><a href="competitions.html">Divisions &amp; Brackets</a></li>
+          <li><a href="registration.html">Team &amp; Volunteer Signup</a></li>
+          <li><a href="news.html">Press Releases &amp; Bulletins</a></li>
+          <li><a href="faq.html">Rules &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Official Regulations</h4>
+        <p style="margin-bottom: 14px;">All student athletes and visiting teams are subject to FIBA international standards and LBEF campus code.</p>
+        <ul class="footer-links">
+          <li><a href="resources.html">Official Rulebook &amp; Code</a></li>
+          <li><a href="resources.html">Player Eligibility Checklist</a></li>
+          <li><a href="resources.html">Emergency &amp; Medical Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Secretariat</h4>
+        <ul class="footer-links">
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">location_on</span>
+            <span>Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">call</span>
+            <span>+977-9801234567</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">mail</span>
+            <span>basketball@study.lbef.edu.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lord Buddha Education Foundation. Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">About Tournament</a>
+        <a href="competitions.html">Tournament Terms</a>
+        <a href="contact.html">Venue Guide</a>
+        <a href="feedback.html">Submit Survey</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    let activeFaqCat = 'all';
+    let allExpanded = false;
+
+    function toggleFaq(headerEl) {
+      const item = headerEl.parentElement;
+      item.classList.toggle('active');
+    }
+
+    function toggleAllFaqs() {
+      allExpanded = !allExpanded;
+      const items = document.querySelectorAll('.faq-item');
+      items.forEach(item => {
+        if (allExpanded) item.classList.add('active');
+        else item.classList.remove('active');
+      });
+    }
+
+    function setFaqCat(cat, btn) {
+      activeFaqCat = cat;
+      document.querySelectorAll('.faq-tab').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterFaq();
+    }
+
+    function filterFaq() {
+      const query = (document.getElementById('faq-search').value || '').toLowerCase().trim();
+      const items = document.querySelectorAll('.faq-item');
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const cat = item.getAttribute('data-cat');
+        const text = item.getAttribute('data-q').toLowerCase();
+
+        const matchCat = (activeFaqCat === 'all' || cat === activeFaqCat);
+        const matchQuery = (!query || text.includes(query));
+
+        if (matchCat && matchQuery) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      const emptyState = document.getElementById('faq-empty-state');
+      if (visibleCount === 0) {
+        emptyState.style.display = 'block';
+      } else {
+        emptyState.style.display = 'none';
+      }
+    }
+
+    window.toggleFaq = toggleFaq;
+    window.toggleAllFaqs = toggleAllFaqs;
+    window.setFaqCat = setFaqCat;
+    window.filterFaq = filterFaq;
+  </script>
+</body>
+</html>

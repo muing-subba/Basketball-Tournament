@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstration Login | LBEF HOOP FEST 2026</title>
+  <meta name="description" content="Front-end demonstration login for team captains, participants, and volunteers at LBEF HOOP FEST 2026.">
+  <link rel="icon" type="image/png" href="assets/images/lbef-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-links">
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">location_on</span> Maitidevi, Kathmandu, Nepal</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">call</span> +977-9801234567</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">mail</span> basketball@study.lbef.edu.np</span>
+      </div>
+      <div>
+        <span class="event-badge">
+          <span class="pulse-dot"></span>
+          Tournament Dates: Oct 25 – 30, 2026
+        </span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="logo-lockup" title="LBEF Hoop Fest 2026 Home">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+        </div>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <span class="logo-title">LBEF HOOP FEST</span>
+            <span class="year-tag">2026</span>
+          </div>
+          <span class="logo-sub">Lord Buddha Education Foundation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a href="competitions.html">Competitions</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a href="highlights.html">Highlights</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="schedule.html" class="btn-live-scores">
+          <span class="pulse-dot"></span>
+          Live Scores
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm">
+          <span>Register Team</span>
+        </a>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Tournament</a></li>
+        <li><a href="schedule.html">Match Schedule</a></li>
+        <li><a href="registration.html">Team &amp; Volunteer Registration</a></li>
+        <li><a href="competitions.html">Rules &amp; Tournament Bracket</a></li>
+        <li><a href="resources.html">Resources &amp; Downloads</a></li>
+        <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+        <li><a href="news.html">News &amp; Bulletins</a></li>
+        <li><a href="highlights.html">Highlights &amp; Hall of Fame</a></li>
+        <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+        <li><a href="contact.html">Venue &amp; Contact Secretariat</a></li>
+        <li><a href="feedback.html">Tournament Survey &amp; Feedback</a></li>
+        <li><a href="dashboard.html">Participant Dashboard</a></li>
+        <li><a href="login.html" class="active">Demo Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main style="display: flex; align-items: center; justify-content: center; padding: 60px 24px; min-height: calc(100vh - 200px);">
+    <div style="max-width: 480px; width: 100%; background: var(--varsity-navy); border: 1px solid var(--court-border); border-radius: var(--radius-md); padding: 36px; box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);">
+      <!-- Brand Icon Header -->
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div style="width: 56px; height: 56px; background: rgba(255, 87, 34, 0.15); color: var(--court-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px auto; border: 1px solid var(--court-orange);">
+          <span class="material-symbols-outlined" style="font-size: 32px;">sports_basketball</span>
+        </div>
+        <span class="badge-tag" style="background: rgba(198, 40, 40, 0.2); color: #ff8a80; margin-bottom: 6px;">Client-Side Demonstration Mode</span>
+        <h1 style="font-family: var(--font-display); font-size: 26px; color: var(--pure-white); font-weight: 800; text-transform: uppercase;">
+          Participant Portal
+        </h1>
+        <p style="font-size: 13px; color: var(--secondary); margin-top: 4px;">
+          Sign in to manage your team roster, access player passes, and confirm game day check-ins.
+        </p>
+      </div>
+
+      <!-- Demonstration Info Banner -->
+      <div style="background: var(--surface-low); border: 1px solid var(--court-border); padding: 12px 14px; border-radius: var(--radius-sm); margin-bottom: 20px; font-size: 11px; color: var(--secondary); line-height: 1.5;">
+        <strong style="color: var(--court-orange);">Demo Authentication Notice:</strong> This is a front-end simulation for an academic project. Any valid student ID format will grant access, or click a 1-click preset button below.
+      </div>
+
+      <!-- Quick 1-Click Demo Logins -->
+      <div style="margin-bottom: 20px;">
+        <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">1-Click Demo Profiles</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickFill('captain')">
+            <span class="material-symbols-outlined" style="font-size: 16px; color: var(--court-orange);">shield</span>
+            <span>Team Captain</span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickFill('volunteer')">
+            <span class="material-symbols-outlined" style="font-size: 16px; color: var(--court-orange);">volunteer_activism</span>
+            <span>Volunteer</span>
+          </button>
+        </div>
+      </div>
+
+      <form id="login-form" onsubmit="handleDemoLogin(event)">
+        <div class="form-group">
+          <label class="form-label required" for="login-id">Student ID or College Email</label>
+          <input type="text" id="login-id" class="form-input" placeholder="e.g. NP01CP4S24001 or captain@study.lbef.edu.np" required>
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="form-label required" for="login-password">Demo Password</label>
+            <button type="button" onclick="togglePassVisibility()" style="background: none; border: none; color: var(--court-orange); font-size: 11px; font-weight: 600; cursor: pointer;">Show / Hide</button>
+          </div>
+          <div style="position: relative;">
+            <input type="password" id="login-password" class="form-input" style="width: 100%;" placeholder="••••••••" value="lbef2026" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+          <span>Sign In to Dashboard</span>
+          <span class="material-symbols-outlined">login</span>
+        </button>
+      </form>
+
+      <div style="margin-top: 24px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 16px;">
+        <span style="font-size: 12px; color: var(--secondary);">Not registered yet?</span>
+        <a href="registration.html" style="font-size: 12px; color: var(--court-orange); text-decoration: none; font-weight: 700; margin-left: 6px;">Register Your Team &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-bottom" style="border: none; padding-top: 0; text-align: center; justify-content: center;">
+      <p>&copy; 2026 Lord Buddha Education Foundation. Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function togglePassVisibility() {
+      const field = document.getElementById('login-password');
+      if (field.type === 'password') {
+        field.type = 'text';
+      } else {
+        field.type = 'password';
+      }
+    }
+
+    function quickFill(role) {
+      if (role === 'captain') {
+        document.getElementById('login-id').value = 'NP01CP4S24001';
+        document.getElementById('login-password').value = 'varsity2026';
+        showToast('Filled Cyber Warriors Captain credentials', 'info');
+      } else if (role === 'volunteer') {
+        document.getElementById('login-id').value = 'NP01CP4S24099';
+        document.getElementById('login-password').value = 'volunteer2026';
+        showToast('Filled Courtside Volunteer credentials', 'info');
+      }
+    }
+
+    function handleDemoLogin(e) {
+      e.preventDefault();
+      const loginId = document.getElementById('login-id').value.trim();
+
+      // Check if team exists in localStorage
+      const teams = JSON.parse(localStorage.getItem('lbef_teams') || '[]');
+      const matchedTeam = teams.find(t => 
+        (t.captainSid && t.captainSid.toLowerCase() === loginId.toLowerCase()) ||
+        (t.email && t.email.toLowerCase() === loginId.toLowerCase())
+      ) || (teams.length > 0 ? teams[0] : { id: 'LBEF-HF26-7821', name: 'Cyber Warriors', captain: 'Aayush Shrestha' });
+
+      const userSession = {
+        name: matchedTeam.captain || 'Student Athlete',
+        role: 'Captain',
+        studentId: loginId,
+        teamId: matchedTeam.id,
+        teamName: matchedTeam.name
+      };
+
+      localStorage.setItem('lbef_current_user', JSON.stringify(userSession));
+      showToast(`Welcome back, ${userSession.name}!`, 'success');
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 800);
+    }
+  </script>
+</body>
+</html>

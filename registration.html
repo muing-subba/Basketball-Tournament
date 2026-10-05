@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament Registration &amp; Volunteers | LBEF HOOP FEST 2026</title>
+  <meta name="description" content="Register your college basketball team or apply as a courtside volunteer for LBEF HOOP FEST 2026. Official registration system with roster builder.">
+  <link rel="icon" type="image/png" href="assets/images/lbef-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="top-bar-links">
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">location_on</span> Maitidevi, Kathmandu, Nepal</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">call</span> +977-9801234567</span>
+        <span style="opacity: 0.3;">|</span>
+        <span><span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 14px;">mail</span> basketball@study.lbef.edu.np</span>
+      </div>
+      <div>
+        <span class="event-badge">
+          <span class="pulse-dot"></span>
+          Tournament Dates: Oct 25 – 30, 2026
+        </span>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="logo-lockup" title="LBEF Hoop Fest 2026 Home">
+        <div class="logo-img-wrapper">
+          <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+        </div>
+        <div class="logo-text">
+          <div class="logo-title-row">
+            <span class="logo-title">LBEF HOOP FEST</span>
+            <span class="year-tag">2026</span>
+          </div>
+          <span class="logo-sub">Lord Buddha Education Foundation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="schedule.html">Schedule</a></li>
+          <li class="nav-item"><a href="competitions.html">Competitions</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="news.html">News</a></li>
+          <li class="nav-item"><a href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a href="highlights.html">Highlights</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="schedule.html" class="btn-live-scores">
+          <span class="pulse-dot"></span>
+          Live Scores
+        </a>
+        <a href="registration.html" class="btn btn-primary btn-sm active">
+          <span>Register Team</span>
+        </a>
+        <div class="auth-nav-slot">
+          <a href="login.html" class="btn btn-secondary btn-sm">
+            <span class="material-symbols-outlined" style="font-size: 16px;">person</span>
+            <span>Login</span>
+          </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+          <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Tournament</a></li>
+        <li><a href="schedule.html">Match Schedule</a></li>
+        <li><a href="registration.html" class="active">Team &amp; Volunteer Registration</a></li>
+        <li><a href="competitions.html">Rules &amp; Tournament Bracket</a></li>
+        <li><a href="resources.html">Resources &amp; Downloads</a></li>
+        <li><a href="gallery.html">Photo &amp; Video Gallery</a></li>
+        <li><a href="news.html">News &amp; Bulletins</a></li>
+        <li><a href="highlights.html">Highlights &amp; Hall of Fame</a></li>
+        <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+        <li><a href="contact.html">Venue &amp; Contact Secretariat</a></li>
+        <li><a href="feedback.html">Tournament Survey &amp; Feedback</a></li>
+        <li><a href="dashboard.html">Participant Dashboard</a></li>
+        <li><a href="login.html">Demo Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO HEADER -->
+    <section style="background: linear-gradient(135deg, var(--stadium-navy) 0%, var(--varsity-navy) 100%); padding: 50px 24px; border-bottom: 1px solid var(--court-border); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="section-kicker" style="justify-content: center; margin-bottom: 8px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">app_registration</span>
+          Official Enlistment Portal
+        </span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 4.5vw, 46px); color: var(--pure-white); font-weight: 800; text-transform: uppercase;">
+          Tournament Registration
+        </h1>
+        <p style="font-size: 14px; color: var(--secondary); max-width: 600px; margin: 8px auto 0 auto;">
+          Submit your official varsity 5v5 team roster or join the volunteer courtside crew. Roster registration deadline: <strong>October 18, 2026</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- REGISTRATION TABS NAV -->
+    <section class="section-wrapper" style="padding-top: 32px; padding-bottom: 16px;">
+      <div style="display: flex; justify-content: center;">
+        <div class="tabs-container">
+          <button id="tab-btn-team" class="tab-btn reg-nav-btn active" onclick="switchRegTab('team')">
+            <span class="material-symbols-outlined" style="font-size: 16px;">groups</span>
+            Team Registration (5v5)
+          </button>
+          <button id="tab-btn-volunteer" class="tab-btn reg-nav-btn" onclick="switchRegTab('volunteer')">
+            <span class="material-symbols-outlined" style="font-size: 16px;">volunteer_activism</span>
+            Volunteer Application
+          </button>
+          <button id="tab-btn-lookup" class="tab-btn reg-nav-btn" onclick="switchRegTab('lookup')">
+            <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
+            Lookup My Registration
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: TEAM REGISTRATION FORM -->
+    <section id="team-reg-section" class="section-wrapper" style="padding-top: 0;">
+      <div style="max-width: 880px; margin: 0 auto; background: var(--varsity-navy); border: 1px solid var(--court-border); border-radius: var(--radius-md); padding: 32px; box-shadow: 0 16px 36px rgba(0,0,0,0.4);">
+        <div style="border-bottom: 1px solid var(--court-border); padding-bottom: 16px; margin-bottom: 24px;">
+          <h2 style="font-family: var(--font-display); font-size: 22px; color: var(--pure-white); text-transform: uppercase;">Team Entry &amp; Captain Information</h2>
+          <p style="font-size: 13px; color: var(--secondary);">All roster members must be currently enrolled students at LBEF or participating invitational colleges.</p>
+        </div>
+
+        <form id="team-registration-form" onsubmit="handleTeamRegistration(event)">
+          <!-- General Team Info -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="reg-team-name">Team Name</label>
+              <input type="text" id="reg-team-name" class="form-input" placeholder="e.g. Cyber Warriors" required>
+              <span id="err-team-name" class="error-text">Please enter a unique team name.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label required" for="reg-dept">Faculty / Department</label>
+              <select id="reg-dept" class="form-select" required>
+                <option value="Faculty of Information Technology">Faculty of Information Technology (IT)</option>
+                <option value="Faculty of Computer Science & Software">Faculty of Computer Science &amp; Software (CS)</option>
+                <option value="Department of Artificial Intelligence">Department of Artificial Intelligence (AI)</option>
+                <option value="School of Business Management">School of Business Management (BBA/MBA)</option>
+                <option value="APU Exchange & International">APU Exchange &amp; International (Malaysia)</option>
+                <option value="Cloud Computing & Network Security">Cloud Computing &amp; Network Security</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="reg-captain-name">Captain Full Name</label>
+              <input type="text" id="reg-captain-name" class="form-input" placeholder="e.g. Aayush Shrestha" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label required" for="reg-captain-sid">Captain Student ID / Roll No</label>
+              <input type="text" id="reg-captain-sid" class="form-input" placeholder="e.g. NP01CP4S24001" required>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="reg-email">Official Student Email</label>
+              <input type="email" id="reg-email" class="form-input" placeholder="e.g. aayush.s@study.lbef.edu.np" required>
+              <span id="err-email" class="error-text">Please enter a valid academic email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label required" for="reg-phone">Nepali Mobile Number</label>
+              <input type="tel" id="reg-phone" class="form-input" placeholder="e.g. +977-9801234567 or 9801234567" required>
+              <span id="err-phone" class="error-text">Valid Nepali phone required (e.g. +977-98XXXXXXXX or 98XXXXXXXX).</span>
+            </div>
+          </div>
+
+          <!-- Roster Section (Min 5 players) -->
+          <div style="border-top: 1px solid var(--court-border); padding-top: 24px; margin-top: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 18px; color: var(--pure-white); text-transform: uppercase;">
+                  Active Playing Roster (5 to 10 Athletes)
+                </h3>
+                <span style="font-size: 12px; color: var(--secondary);">FIBA rules require 5 on-court athletes and up to 5 substitutes.</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="addPlayerSlot()">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--court-orange);">person_add</span>
+                <span>Add Player Slot</span>
+              </button>
+            </div>
+
+            <div id="roster-inputs-container">
+              <!-- Player 1 (Captain) -->
+              <div class="form-grid player-row">
+                <div class="form-group">
+                  <label class="form-label required">Player #1 (Captain)</label>
+                  <input type="text" class="form-input player-name" placeholder="Captain Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Student ID</label>
+                  <input type="text" class="form-input player-sid" placeholder="e.g. NP01CP4S24001" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Jersey #</label>
+                  <input type="number" class="form-input player-jersey" placeholder="e.g. 23" min="0" max="99" required>
+                </div>
+              </div>
+
+              <!-- Player 2 -->
+              <div class="form-grid player-row">
+                <div class="form-group">
+                  <label class="form-label required">Player #2</label>
+                  <input type="text" class="form-input player-name" placeholder="Athlete Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Student ID</label>
+                  <input type="text" class="form-input player-sid" placeholder="e.g. NP01CP4S24002" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Jersey #</label>
+                  <input type="number" class="form-input player-jersey" placeholder="e.g. 7" min="0" max="99" required>
+                </div>
+              </div>
+
+              <!-- Player 3 -->
+              <div class="form-grid player-row">
+                <div class="form-group">
+                  <label class="form-label required">Player #3</label>
+                  <input type="text" class="form-input player-name" placeholder="Athlete Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Student ID</label>
+                  <input type="text" class="form-input player-sid" placeholder="e.g. NP01CP4S24003" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Jersey #</label>
+                  <input type="number" class="form-input player-jersey" placeholder="e.g. 11" min="0" max="99" required>
+                </div>
+              </div>
+
+              <!-- Player 4 -->
+              <div class="form-grid player-row">
+                <div class="form-group">
+                  <label class="form-label required">Player #4</label>
+                  <input type="text" class="form-input player-name" placeholder="Athlete Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Student ID</label>
+                  <input type="text" class="form-input player-sid" placeholder="e.g. NP01CP4S24004" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Jersey #</label>
+                  <input type="number" class="form-input player-jersey" placeholder="e.g. 14" min="0" max="99" required>
+                </div>
+              </div>
+
+              <!-- Player 5 -->
+              <div class="form-grid player-row">
+                <div class="form-group">
+                  <label class="form-label required">Player #5</label>
+                  <input type="text" class="form-input player-name" placeholder="Athlete Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Student ID</label>
+                  <input type="text" class="form-input player-sid" placeholder="e.g. NP01CP4S24005" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label required">Jersey #</label>
+                  <input type="number" class="form-input player-jersey" placeholder="e.g. 30" min="0" max="99" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rules agreement -->
+          <div style="background: var(--surface-low); border: 1px solid var(--court-border); padding: 16px; border-radius: var(--radius-sm); margin-bottom: 24px;">
+            <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+              <input type="checkbox" id="reg-consent" required style="margin-top: 3px;">
+              <span style="font-size: 13px; color: var(--secondary); line-height: 1.5;">
+                I hereby declare on behalf of our team that all submitted student IDs are authentic, all athletes meet LBEF academic standing, and we agree to abide by the FIBA Fair Play Code of Conduct and official referee rulings.
+              </span>
+            </label>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            <button type="reset" class="btn btn-secondary">Clear Form</button>
+            <button type="submit" class="btn btn-primary btn-lg">
+              <span>Submit &amp; Proceed to Fee Demo</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 2: VOLUNTEER REGISTRATION FORM -->
+    <section id="volunteer-reg-section" class="section-wrapper" style="padding-top: 0; display: none;">
+      <div style="max-width: 720px; margin: 0 auto; background: var(--varsity-navy); border: 1px solid var(--court-border); border-radius: var(--radius-md); padding: 32px; box-shadow: 0 16px 36px rgba(0,0,0,0.4);">
+        <div style="border-bottom: 1px solid var(--court-border); padding-bottom: 16px; margin-bottom: 24px;">
+          <h2 style="font-family: var(--font-display); font-size: 22px; color: var(--pure-white); text-transform: uppercase;">Courtside Volunteer Enlistment</h2>
+          <p style="font-size: 13px; color: var(--secondary);">Be the backbone of Hoop Fest 2026. Volunteers receive official varsity shirts, meal coupons, and certificate of sports event management.</p>
+        </div>
+
+        <form id="volunteer-registration-form" onsubmit="handleVolunteerRegistration(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="vol-name">Full Name</label>
+              <input type="text" id="vol-name" class="form-input" placeholder="e.g. Priya Maharjan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="vol-sid">Student ID Number</label>
+              <input type="text" id="vol-sid" class="form-input" placeholder="e.g. NP01CP4S24012" required>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="vol-email">College Email</label>
+              <input type="email" id="vol-email" class="form-input" placeholder="e.g. priya.m@study.lbef.edu.np" required>
+              <span id="vol-err-email" class="error-text">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="vol-phone">Nepali Mobile Number</label>
+              <input type="tel" id="vol-phone" class="form-input" placeholder="e.g. 9812345678" required>
+              <span id="vol-err-phone" class="error-text">Valid Nepali phone required (e.g. 98XXXXXXXX).</span>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label required" for="vol-role">Preferred Volunteer Role</label>
+              <select id="vol-role" class="form-select" required>
+                <option value="Court Assistant & Floor Crew">Court Assistant &amp; Floor Crew</option>
+                <option value="Official Scorekeeper & Timekeeper Table">Official Scorekeeper &amp; Timekeeper Table</option>
+                <option value="Photography & Live Media Team">Photography &amp; Live Media Team</option>
+                <option value="First Aid & Sports Medic Support">First Aid &amp; Sports Medic Support</option>
+                <option value="Guest Hospitality & Security Liaison">Guest Hospitality &amp; Security Liaison</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label required" for="vol-availability">Availability Window</label>
+              <select id="vol-availability" class="form-select" required>
+                <option value="All 6 Days (October 25-30)">All 6 Days (October 25-30)</option>
+                <option value="Weekdays Only (October 25-28)">Weekdays Only (October 25-28)</option>
+                <option value="Weekend Finals Only (October 29-30)">Weekend Finals Only (October 29-30)</option>
+                <option value="Morning Shifts Only (08:30 - 13:00)">Morning Shifts Only (08:30 - 13:00)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="vol-experience">Past Volunteer or Basketball Experience (Optional)</label>
+            <textarea id="vol-experience" class="form-textarea" rows="3" placeholder="Describe any previous event organizing or high school / college basketball experience..."></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 12px;">
+            <button type="submit" class="btn btn-primary">
+              <span>Submit Volunteer Application</span>
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 3: REGISTRATION LOOKUP -->
+    <section id="lookup-reg-section" class="section-wrapper" style="padding-top: 0; display: none;">
+      <div style="max-width: 640px; margin: 0 auto; background: var(--varsity-navy); border: 1px solid var(--court-border); border-radius: var(--radius-md); padding: 32px; box-shadow: 0 16px 36px rgba(0,0,0,0.4);">
+        <h2 style="font-family: var(--font-display); font-size: 22px; color: var(--pure-white); text-transform: uppercase; margin-bottom: 8px;">
+          Check Registration Record
+        </h2>
+        <p style="font-size: 13px; color: var(--secondary); margin-bottom: 20px;">
+          Enter your demonstration Registration Reference Number (e.g. <code>LBEF-HF26-7821</code>), Team Name, or Captain Student ID to retrieve your saved details from localStorage.
+        </p>
+
+        <form onsubmit="handleLookup(event)" style="display: flex; gap: 10px; margin-bottom: 24px;">
+          <input type="text" id="lookup-query" class="form-input" style="flex: 1;" placeholder="Enter Ref ID or Student ID" required>
+          <button type="submit" class="btn btn-primary">
+            <span>Search</span>
+            <span class="material-symbols-outlined">search</span>
+          </button>
+        </form>
+
+        <div id="lookup-results"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PAYMENT DEMO MODAL (SECTION 11) -->
+  <div id="modal-payment-demo" class="modal-overlay">
+    <div class="modal-box" style="max-width: 540px;">
+      <button class="modal-close" onclick="closeModal('modal-payment-demo')" aria-label="Close modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div id="payment-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- REGISTRATION SUMMARY / SUCCESS MODAL -->
+  <div id="modal-reg-summary" class="modal-overlay">
+    <div class="modal-box" style="max-width: 540px;">
+      <button class="modal-close" onclick="closeModal('modal-reg-summary')" aria-label="Close modal">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div id="summary-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+          <div class="footer-logo-wrapper">
+            <img src="assets/images/lbef-logo.png" alt="LBEF College Logo - Since 1998" class="footer-logo-img" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1XvYv9RLBY2TZxVFlkxwCXXG5wtsvx8jMQQNpadw6yS1U9TxFPeCBnCcNg2NSWMotqAstyXEmb4CDzkQP-iHZ_BEWrMCr4yGikM3JZEfyjusG4g3USSf_pBftAlPLQcNZb8IsyBGiy4IKDEhbXa3qsNpbbvYuF3IM3DlBouvHOyUZEOjFlWH8l6gY3XfTmOJygoqqJkrbC1qXFTOG0su8aw5w5VH6Ck7KNdQf_uO-g48N1VwRgQaC8JZqn0U2aYbc5yJNVexzq1mQ'">
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 15px;">LBEF HOOP FEST</h4>
+            <span style="font-size: 11px; color: var(--court-orange); font-weight: 700; text-transform: uppercase;">Varsity Championship 2026</span>
+          </div>
+        </div>
+        <p>The premier collegiate inter-university basketball championship in Kathmandu, hosting elite student talent, sportsmanship, and college pride.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Hub</h4>
+        <ul class="footer-links">
+          <li><a href="schedule.html">Match Fixtures &amp; Scores</a></li>
+          <li><a href="competitions.html">Divisions &amp; Brackets</a></li>
+          <li><a href="registration.html">Team &amp; Volunteer Signup</a></li>
+          <li><a href="news.html">Press Releases &amp; Bulletins</a></li>
+          <li><a href="faq.html">Rules &amp; FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Official Regulations</h4>
+        <p style="margin-bottom: 14px;">All student athletes and visiting teams are subject to FIBA international standards and LBEF campus code.</p>
+        <ul class="footer-links">
+          <li><a href="resources.html">Official Rulebook &amp; Code</a></li>
+          <li><a href="resources.html">Player Eligibility Checklist</a></li>
+          <li><a href="resources.html">Emergency &amp; Medical Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tournament Secretariat</h4>
+        <ul class="footer-links">
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">location_on</span>
+            <span>Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">call</span>
+            <span>+977-9801234567</span>
+          </li>
+          <li style="display: flex; gap: 8px;">
+            <span class="material-symbols-outlined" style="color: var(--court-orange); font-size: 16px;">mail</span>
+            <span>basketball@study.lbef.edu.np</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lord Buddha Education Foundation. Lord Buddha Education Foundation, Maitidevi, Kathmandu, Nepal.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">About Tournament</a>
+        <a href="competitions.html">Tournament Terms</a>
+        <a href="contact.html">Venue Guide</a>
+        <a href="feedback.html">Submit Survey</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/registration.js"></script>
+</body>
+</html>
